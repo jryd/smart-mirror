@@ -14,7 +14,6 @@
 $app->get('/', function () use ($app) {
 	$key = array_rand(config('mirror.greetings'));
 	$greeting = config('mirror.greetings')[$key];
-	dd(config('timezone.timezone'));
 
     return view('mirror', [
    		'greeting' => $greeting,
