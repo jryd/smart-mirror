@@ -17,6 +17,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
         <script src="/js/skycons.js"></script>
         <script src="/js/vendor/moment.js"></script>
+        <script src="/js/vendor/moment-timezone.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -37,9 +38,9 @@
             date = null;
 
             var update = function () {
-                date = moment({{ $date }})
+                date = moment(new Date())
                 var html = '<p>' + date.format('dddd, MMMM Do') + '</p>';
-                html += '<p id="time">' + date.zone('+12:00').format('HH:mm') + '</p>';
+                html += '<p id="time">' + date.tz("Pacific/Auckland").format('HH:mm') + '</p>';
                 datetime.html(html);
             };
 
