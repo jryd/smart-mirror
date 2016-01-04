@@ -99,4 +99,7 @@ $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
 // Load mirror configuration file
 $app->configure('mirror');
 
+//Load timezone configuration file
+$app->configure('timezone');
+
 return $app;
