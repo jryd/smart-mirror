@@ -14,11 +14,9 @@
 $app->get('/', function () use ($app) {
 	$key = array_rand(config('mirror.greetings'));
 	$greeting = config('mirror.greetings')[$key];
-	$date = \Carbon\Carbon::now()->setTimeZone('Pacific/Auckland');
 
     return view('mirror', [
    		'greeting' => $greeting,
-   		'date' => $date,
     ]);
 });
 
