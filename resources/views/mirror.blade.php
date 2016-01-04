@@ -37,7 +37,7 @@
             date = null;
 
             var update = function () {
-                date = moment(new Date())
+                date = moment({{ new (Carbon\Carbon::now('Pacific/Auckland')) }})
                 var html = '<p>' + date.format('dddd, MMMM Do') + '</p>';
                 html += '<p id="time">' + date.zone('+12:00').format('HH:mm') + '</p>';
                 datetime.html(html);
