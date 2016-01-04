@@ -40,7 +40,7 @@
             var update = function () {
                 date = moment(new Date())
                 var html = '<p>' + date.format('dddd, MMMM Do') + '</p>';
-                html += '<p id="time">' + date.tz("Pacific/Auckland").format('h:mm A') + '</p>';
+                html += '<p id="time">' + date.tz({{config('timezone.timezone')}}).format('h:mm A') + '</p>';
                 datetime.html(html);
             };
 
