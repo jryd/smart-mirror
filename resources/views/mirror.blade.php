@@ -53,9 +53,9 @@
         // Docs at http://simpleweatherjs.com
         $(document).ready(function() {
           $.simpleWeather({
-            location: 'Philadephia, PA',
-            woeid: '',
-            unit: 'f',
+            location: 'Lower Hutt, Wellington',
+            woeid: '2349239',
+            unit: 'c',
             success: function(weather) {
                 var skycons = new Skycons({"color": "white"});
 
