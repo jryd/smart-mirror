@@ -14,7 +14,7 @@
         <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
         <script src="/js/skycons.js"></script>
         <script src="/js/vendor/moment.js"></script>
         <script src="/js/vendor/moment-timezone.js"></script>
