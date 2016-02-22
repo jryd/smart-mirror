@@ -33,6 +33,7 @@
             {{ $feed->description }}
             </div>
             @endforeach
+            </div>
             
             <div id="weather">
 
