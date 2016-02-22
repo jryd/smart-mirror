@@ -14,9 +14,12 @@
 $app->get('/', function () use ($app) {
 	$key = array_rand(config('mirror.greetings'));
 	$greeting = config('mirror.greetings')[$key];
+	$myFeed = Feed::make('http://www.stuff.co.nz/rss/');
+	$stuffFeed = json_encode($myFeed);
 
     return view('mirror', [
    		'greeting' => $greeting,
+   		'stuffFeed' => $stuffFeed,
     ]);
 });
 
