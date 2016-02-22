@@ -262,5 +262,28 @@
                     }, 3000);
                 })(); 
         </script>
+        <script>
+        window.verticalScroller = function($elem) {
+            var top = parseInt($elem.css("top"));
+            var temp = -1 * $('#verticalScroller > div').height();
+            if(top < temp) {
+                top = $('#verticalScroller').height()
+                $elem.css("top", top);
+            }
+            $elem.animate({ top: (parseInt(top)-60) }, 5000, 'linear', function () {
+              window.verticalScroller($(this))
+            });
+        }
+
+
+        $(document).ready(function() {
+            var i = 0;
+            $("#verticalScroller > div").each(function () {
+                  $(this).css("top", i);
+                  i += 60;
+                  window.verticalScroller($(this));
+            });
+        });
+        </script>
     </body>
 </html>
