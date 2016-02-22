@@ -22,9 +22,8 @@ $app->get('/', function () use ($app) {
 
 $app->get('/feed', function() {
   $myFeed = Feed::make('http://www.stuff.co.nz/rss/');
-  $simplePieInstance = $myFeed->getRawFeederObject();
 
-  return response()->json($simplePieInstance);
+  return response()->json($myFeed);
 });
 
 $app->get('/version', function() use ($app) {
