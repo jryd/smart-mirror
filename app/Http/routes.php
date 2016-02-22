@@ -21,9 +21,10 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/feed', function() {
-  $myFeed = Feed::make('http://www.stuff.co.nz/rss');
+  $myFeed = Feed::make('http://www.stuff.co.nz/rss/');
+  $simplePieInstance = $myFeed->getRawFeederObject();
 
-  return response()->json($myFeed);
+  return response()->json($simplePieInstance);
 });
 
 $app->get('/version', function() use ($app) {
