@@ -29,8 +29,8 @@
             <div id="newsfeed">
             @foreach ($stuffFeed as $feed)
             <div>
-            $feed->title <br>
-            $feed->description
+            {{ $feed->title }}<br>
+            {{ $feed->description }}
             </div>
             @endforeach
             
