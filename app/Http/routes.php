@@ -20,6 +20,12 @@ $app->get('/', function () use ($app) {
     ]);
 });
 
+$app->get('/feed', function() {
+  $myFeed = Feed::make('http://www.stuff.co.nz/rss');
+
+  return response()->json($myFeed);
+});
+
 $app->get('/version', function() use ($app) {
 	$hash = trim(`git rev-parse HEAD`); 
 
