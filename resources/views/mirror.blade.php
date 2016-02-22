@@ -25,6 +25,15 @@
             <div id="date">
 
             </div>
+            
+            <div id="newsfeed">
+            @foreach ($stuffFeed as $feed)
+            <div>
+            $feed->title <br>
+            $feed->description
+            </div>
+            @endforeach
+            
             <div id="weather">
 
             </div>
