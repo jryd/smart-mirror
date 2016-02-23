@@ -142,6 +142,7 @@ canvas {
 
 #verticalScroller ul{
     list-style-type: none;
+    padding: 0;
 }
 
 #verticalScroller li{
