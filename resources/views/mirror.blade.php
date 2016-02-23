@@ -31,7 +31,7 @@
                     <div>
                         {{ $item->title }}
                         <br>
-                        {{ item->description }}
+                        {{ $item->description }}
                     </div>
                 @endforeach
             </div>
