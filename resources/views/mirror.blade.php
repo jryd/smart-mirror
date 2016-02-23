@@ -27,13 +27,15 @@
             </div>
             
             <div id="verticalScroller">
-                @foreach ($stuffFeed as $item)
-                    <div>
-                        {{ $item->title }}
-                        <br>
-                        {{ $item->description }}
-                    </div>
-                @endforeach
+                <ul id="ticker">
+                    @foreach ($stuffFeed as $item)
+                        <li>
+                            {{ $item->title }}
+                            <br>
+                            {{ $item->description }}
+                        </li>
+                    @endforeach
+                </ul>
             </div>
             
             <div id="weather">
@@ -265,26 +267,12 @@
                 })(); 
         </script>
         <script>
-        window.verticalScroller = function($elem) {
-            var top = parseInt($elem.css("top"));
-            var temp = -1 * $('#verticalScroller > div').height();
-            if(top < temp) {
-                top = $('#verticalScroller').height()
-                $elem.css("top", top);
-            }
-            $elem.animate({ top: (parseInt(top)-60) }, 600, function () {
-              window.verticalScroller($(this))
-            });
+        function tick(){
+            $('#ticker li:first').slideUp( function () { $(this).appendTo($('#ticker')).slideDown(); });
         }
         
-        
         $(document).ready(function() {
-            var i = 0;
-            $("#verticalScroller > div").each(function () {
-                  $(this).css("top", i);
-                  i += 60;
-                  window.verticalScroller($(this));
-            });
+            setInterval(function(){ tick() }, 5000);
         });
 
         </script>
