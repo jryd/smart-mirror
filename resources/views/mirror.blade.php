@@ -27,10 +27,13 @@
             </div>
             
             <div id="verticalScroller">
-                <div>{{ $stuffFeed[0]->title }}<br>{{ $stuffFeed[0]->description }}</div>
-                <div>{{ $stuffFeed[1]->title }}<br>{{ $stuffFeed[1]->description }}</div>
-                <div>{{ $stuffFeed[2]->title }}<br>{{ $stuffFeed[2]->description }}</div>
-                <div>{{ $stuffFeed[3]->title }}<br>{{ $stuffFeed[3]->description }}</div>
+                @foreach ($stuffFeed as $item)
+                    <div>
+                        {{ $item->title }}
+                        <br>
+                        {{ item->description }}
+                    </div>
+                @endforeach
             </div>
             
             <div id="weather">
