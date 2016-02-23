@@ -261,6 +261,7 @@
                     }, 3000);
                 })(); 
         </script>
+        <script>
         window.verticalScroller = function($elem) {
             var top = parseInt($elem.css("top"));
             var temp = -1 * $('#verticalScroller > div').height();
