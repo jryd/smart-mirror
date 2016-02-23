@@ -146,7 +146,6 @@ canvas {
 
 #verticalScroller li{
     width:380px;
-    padding-left:10px;
     height:auto;
     border-bottom: dotted white;
     word-break: break-word;
