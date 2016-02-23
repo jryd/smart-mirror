@@ -140,13 +140,11 @@ canvas {
     overflow: hidden;
 }
 
-#verticalScroller > div{
-    position:absolute;
+#verticalScroller li{
     width:380px;
     padding-left:10px;
     height:auto;
     border-bottom: dotted white;
-    overflow:hidden;
 }
 
 section {
