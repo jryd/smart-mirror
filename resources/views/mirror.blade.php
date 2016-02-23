@@ -26,13 +26,11 @@
 
             </div>
             
-            <div id="newsfeed">
-            @foreach ($stuffFeed as $feed)
-            <div>
-            {{ $feed->title }}<br>
-            {{ $feed->description }}
-            </div>
-            @endforeach
+            <div id="verticalScroller">
+                <div>{{ $stuffFeed[0]->title }}<br>{{ $stuffFeed[0]->description }}</div>
+                <div>{{ $stuffFeed[1]->title }}<br>{{ $stuffFeed[1]->description }}</div>
+                <div>{{ $stuffFeed[2]->title }}<br>{{ $stuffFeed[2]->description }}</div>
+                <div>{{ $stuffFeed[3]->title }}<br>{{ $stuffFeed[3]->description }}</div>
             </div>
             
             <div id="weather">
@@ -263,28 +261,28 @@
                     }, 3000);
                 })(); 
         </script>
-        <script>
         window.verticalScroller = function($elem) {
             var top = parseInt($elem.css("top"));
-            var temp = -1 * $('#newsfeed > div').height();
+            var temp = -1 * $('#verticalScroller > div').height();
             if(top < temp) {
-                top = $('#newsfeed').height()
+                top = $('#verticalScroller').height()
                 $elem.css("top", top);
             }
-            $elem.animate({ top: (parseInt(top)-60) }, 5000, 'linear', function () {
+            $elem.animate({ top: (parseInt(top)-60) }, 600, function () {
               window.verticalScroller($(this))
             });
         }
-
-
+        
+        
         $(document).ready(function() {
             var i = 0;
-            $("#newsfeed > div").each(function () {
+            $("#verticalScroller > div").each(function () {
                   $(this).css("top", i);
                   i += 60;
                   window.verticalScroller($(this));
             });
         });
+
         </script>
     </body>
 </html>
