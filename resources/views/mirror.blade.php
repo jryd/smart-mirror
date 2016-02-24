@@ -30,7 +30,7 @@
                 <ul id="ticker">
                     @foreach ($stuffFeed as $item)
                         <li>
-                            <strong>{{ htmlspecialchars_decode($item->title) }}</strong>
+                            <h3>{{ htmlspecialchars_decode($item->title) }}</h3>
                             <br>
                             {{ htmlspecialchars_decode($item->description) }}
                         </li>
