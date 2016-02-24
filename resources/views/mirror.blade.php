@@ -31,7 +31,6 @@
                     @foreach ($stuffFeed as $item)
                         <li>
                             <h3>{{ htmlspecialchars_decode($item->title) }}</h3>
-                            <br>
                             {{ htmlspecialchars_decode($item->description) }}
                         </li>
                     @endforeach
