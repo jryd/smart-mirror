@@ -1,4 +1,4 @@
 <?php
 return [
-	'timezone' => 'Pacific/Auckland'
+	'timezone' => 'Australia/Brisbane'
 ];

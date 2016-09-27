@@ -6,8 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'phpDocumentor' => array($vendorDir . '/phpdocumentor/reflection-docblock/src'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
+    'SimplePie' => array($vendorDir . '/simplepie/simplepie/library'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Dotenv' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),

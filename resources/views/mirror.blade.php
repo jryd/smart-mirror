@@ -15,9 +15,9 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
-        <script src="/js/skycons.js"></script>
-        <script src="/js/vendor/moment.js"></script>
-        <script src="/js/vendor/moment-timezone.js"></script>
+        <script src="js/skycons.js"></script>
+        <script src="js/vendor/moment.js"></script>
+        <script src="js/vendor/moment-timezone.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -66,8 +66,8 @@
         // Docs at http://simpleweatherjs.com
         $(document).ready(function() {
           $.simpleWeather({
-            location: 'Lower Hutt, Wellington',
-            woeid: '2349239',
+            location: 'Brisbane, Australia',
+            //woeid: '2349239',
             unit: 'c',
             success: function(weather) {
                 var skycons = new Skycons({"color": "white"});
